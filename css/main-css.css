@@ -1,0 +1,37 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: white;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.p-left-5 {
+    padding-left: 5px;
+}
+
+.p-right-5 {
+    padding-right: 5px;
+}
+
+.p-left-10 {
+    padding-left: 10px;
+}
+
+.p-right-10 {
+    padding-right: 10px;
+}
+
+.flex-left {
+    float: left;
+}
+
+.middle {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}

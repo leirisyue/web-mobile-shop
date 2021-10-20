@@ -1,0 +1,9 @@
+#header {
+    background-color: #333333 !important;
+    color: white;
+}
+
+#top-bar {
+    height: 35px;
+    align-items: center;
+}
