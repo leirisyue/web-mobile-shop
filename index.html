@@ -89,31 +89,22 @@
     <div class="_container show_img_hightlight">
         <div class="col-sm-12">
             <div class="row">
-                <div class="col-lg-4 col-md-6 text-center">
+                <div class="col-md-6 col-sm-12 text-center">
                     <div class="single-product-item">
-                        <div class="product-image">
-                            <a href="#"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+                        <div class="product-image" id="show_banner_img_2">
+
                         </div>
                         <h3>Truyền hình</h3>
                         <a href="index-tv.html" class="cart-btn"><i class="fa fa-television"></i> Xem sản phẩm</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center">
+                <div class="col-md-6 col-sm-12 text-center">
                     <div class="single-product-item">
-                        <div class="product-image">
-                            <a href="#"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
+                        <div class="product-image" id="show_banner_img_1" style="height: 290px;">
+
                         </div>
                         <h3>Di động</h3>
                         <a href="index-mobile.html" class="cart-btn"><i class="fa fa-mobile-phone"></i> Xem sản phẩm</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
-                    <div class="single-product-item">
-                        <div class="product-image">
-                            <a href="#"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
-                        </div>
-                        <h3>Thiết bị</h3>
-                        <a href="cart.html" class="cart-btn"><i class="fa fa-cloud"></i> Xem sản phẩm</a>
                     </div>
                 </div>
             </div>
@@ -134,7 +125,7 @@
                                 </span>
                             </div>
                         </div>
-                        <img src="assets/img/a.jpg" alt="">
+                        <span id="show_banner_img_3"></span>
                     </div>
                 </div>
                 <!--Content Column-->
@@ -225,6 +216,17 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        let show_banner = api_getbanner();
+        document.querySelector("#show_banner_img_1").innerHTML = expoxt_html_banner_1(show_banner);
+        document.querySelector("#show_banner_img_2").innerHTML = expoxt_html_banner_2(show_banner);
+        document.querySelector("#show_banner_img_3").innerHTML = expoxt_html_banner_3(show_banner);
+    </script>
+
+
 </body>
 
 </html>

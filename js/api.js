@@ -7,3 +7,11 @@ const api_listmobile = () => {
     xmlhttp.send();
     return JSON.parse(xmlhttp.responseText.trim());
 }
+const api_getbanner = () => {
+    let url = "banner";
+    let xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.open("GET", `${address}/${url}`, false);
+    xmlhttp.send();
+    return JSON.parse(xmlhttp.responseText.trim());
+}
