@@ -1,0 +1,17 @@
+DB_HOST: 
+mongod+srv://user:user@123@cluster0.hlqy6.mongodb.net/javaScriptDB?retryWrites=true&w=majority
+
+DB_NAME: javaScriptDB
+
+user
+user@123
+
+with array json: --jsonArray
+
+import: 
+mongoimport --uri mongodb+srv://user:user@123@cluster0.hlqy6.mongodb.net/javaScriptDB --collection mobile --type json --file Y:\js\server\data\mobile.json --jsonArray
+
+export: 
+mongoexport --uri mongodb+srv://user:user@123@cluster0.hlqy6.mongodb.net/javaScriptDB --collection <COLLECTION> --type <FILETYPE> --out <FILENAME>
+
+mongodump --uri mongodb+srv://lntt.thuy@gmail.com:Moonyue97@cluster0.hlqy6.mongodb.net/javaScriptDB

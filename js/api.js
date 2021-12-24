@@ -15,3 +15,11 @@ const api_getbanner = () => {
     xmlhttp.send();
     return JSON.parse(xmlhttp.responseText.trim());
 }
+const api_gettv = () => {
+    let url = "television";
+    let xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.open("GET", `${address}/${url}`, false);
+    xmlhttp.send();
+    return JSON.parse(xmlhttp.responseText.trim());
+}

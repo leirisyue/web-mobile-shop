@@ -1,11 +1,11 @@
-const expoxt_html_list_mobile = (listmobile) => {
+const expoxt_html_list_tv = (listmobile) => {
     let html = ``;
     listmobile.forEach(item => {
         html += `              
                 <div class="col-lg-3 col-md-4 col-sm-6 mobile_card">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg">
-                        <img src="${item.image_mini}" class="img_mobile"/>
+                        <img src="${item.image}" class="img_mobile"/>
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>

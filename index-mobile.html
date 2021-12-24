@@ -9,10 +9,13 @@
     <!--Add this-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <!-- // -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="./css/mobile-style.css" rel="stylesheet">
+    <link href="./css/item-style.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
     <!-- // -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -20,57 +23,142 @@
 
 <body>
 
-    <div class="col-sm-12 p-30-top">
-        <div class="row">
-            <div class="col-sm-2">
-                <div class="left-side-bar">
-                    <nav class="navbar navbar-light ">
-                        <div>
-                            <ul class="navbar-nav">
-                                <li class="navbar-brand" href="#">YUE</li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Features</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Pricing</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown link
-                          </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="bx bxl-c-plus-plus"></i>
+            <span class="logo-name">abc</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link-name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="#" class="link-name">Category</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="bx bx-collection"></i>
+                        <span class="link-name">category</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
                 </div>
-            </div>
-            <div class="col-sm-10">
-                <div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section-title">
-                                    <h2>Điện thoại thông minh</h2>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="#">Category</a></li>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">Javasript</a></li>
+                    <li><a href="#">PHP & MySQL</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="bx bx-book-alt"></i>
+                        <span class="link-name">Posts</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="#">Posts</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Card Design</a></li>
+                    <li><a href="#">Login form</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-pie-chart-alt-2"></i>
+                    <span class="link-name">Analytics</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="#" class="link-name">Analytics</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-line-chart"></i>
+                    <span class="link-name">Chart</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="#" class="link-name">Chart</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="bx bx-plug"></i>
+                        <span class="link-name">Plugins</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="#">Plugins</a></li>
+                    <li><a href="#">UI Face</a></li>
+                    <li><a href="#">Pigment</a></li>
+                    <li><a href="#">Box Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-compass"></i>
+                    <span class="link-name">Explore</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="#" class="link-name">Explore</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-history"></i>
+                    <span class="link-name">History</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="#" class="link-name">History</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span class="link-name">Setting</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="#" class="link-name">Setting</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class="bx bx-menu"></i>
+            <div class="col-sm-12 p-30-top">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="section-title">
+                                            <h2>Điện thoại thông minh</h2>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 featured__filter ">
+                                    <div class="row" id="show_list_mobile"></div>
+
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-12 featured__filter ">
-                            <div class="row" id="show_list_mobile"></div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+
 
 
 
@@ -83,6 +171,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/mobile.js"></script>
     <script src="js/api.js"></script>
+    <script src="js/sidebar.js"></script>
 
     <script>
         let list_mobile = api_listmobile();
