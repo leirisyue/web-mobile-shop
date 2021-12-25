@@ -30,103 +30,28 @@
         </div>
         <ul class="nav-links">
             <li>
-                <a href="#">
-                    <i class="bx bx-grid-alt"></i>
+                <a href="./index.html">
+                    <i class="bx bx-home"></i>
                     <span class="link-name">Dashboard</span>
                 </a>
-                <ul class="sub-menu blank">
-                    <li><a href="#" class="link-name">Category</a></li>
-                </ul>
             </li>
             <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class="bx bx-collection"></i>
-                        <span class="link-name">category</span>
-                    </a>
-                    <i class="bx bxs-chevron-down arrow"></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class="link-name" href="#">Category</a></li>
-                    <li><a href="#">HTML & CSS</a></li>
-                    <li><a href="#">Javasript</a></li>
-                    <li><a href="#">PHP & MySQL</a></li>
-                </ul>
-            </li>
-            <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class="bx bx-book-alt"></i>
-                        <span class="link-name">Posts</span>
-                    </a>
-                    <i class="bx bxs-chevron-down arrow"></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class="link-name" href="#">Posts</a></li>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Card Design</a></li>
-                    <li><a href="#">Login form</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="bx bx-pie-chart-alt-2"></i>
-                    <span class="link-name">Analytics</span>
+                <a href="./index-mobile.html">
+                    <i class='bx bxs-devices'></i>
+                    <span class="link-name">Mobile</span>
                 </a>
-                <ul class="sub-menu blank">
-                    <li><a href="#" class="link-name">Analytics</a></li>
-                </ul>
             </li>
             <li>
-                <a href="#">
-                    <i class="bx bx-line-chart"></i>
-                    <span class="link-name">Chart</span>
+                <a href="./index-tv.html">
+                    <i class='bx bx-tv'></i>
+                    <span class="link-name">Television</span>
                 </a>
-                <ul class="sub-menu blank">
-                    <li><a href="#" class="link-name">Chart</a></li>
-                </ul>
             </li>
             <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class="bx bx-plug"></i>
-                        <span class="link-name">Plugins</span>
-                    </a>
-                    <i class="bx bxs-chevron-down arrow"></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class="link-name" href="#">Plugins</a></li>
-                    <li><a href="#">UI Face</a></li>
-                    <li><a href="#">Pigment</a></li>
-                    <li><a href="#">Box Icons</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="bx bx-compass"></i>
-                    <span class="link-name">Explore</span>
+                <a href="#" data-toggle="modal" data-target="#exampleModal" type="button">
+                    <i class='bx bx-search-alt-2'></i>
+                    <span class="link-name">Tìm kiếm</span>
                 </a>
-                <ul class="sub-menu blank">
-                    <li><a href="#" class="link-name">Explore</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="bx bx-history"></i>
-                    <span class="link-name">History</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a href="#" class="link-name">History</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="bx bx-cog"></i>
-                    <span class="link-name">Setting</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a href="#" class="link-name">Setting</a></li>
-                </ul>
             </li>
         </ul>
     </div>
@@ -135,21 +60,23 @@
             <i class="bx bx-menu"></i>
             <div class="col-sm-12 p-30-top">
                 <div class="row">
-                    <div class="col-sm-10">
-                        <div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="section-title">
-                                            <h2>Điện thoại thông minh</h2>
-                                        </div>
-
+                    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="section-title">
+                                        <h2>Điện thoại thông minh</h2>
                                     </div>
+                                    Nhập Giá trị tìm:
+                                    <input type="text" id="Th_gtTim" onkeyup="KeyCode(event)">
+                                    <button id="Th_Tim" class="btn btn-primary">
+                                            <i class="fa fa-search-plus"></i>
+                                        </button>
+                                    <div id="Th_Thong_bao"></div>
                                 </div>
-                                <div class="col-sm-12 featured__filter ">
-                                    <div class="row" id="show_list_mobile"></div>
-
-                                </div>
+                            </div>
+                            <div class="col-sm-12 featured__filter ">
+                                <div class="row" id="Th_Danh_sach"></div>
                             </div>
                         </div>
                     </div>
@@ -158,9 +85,28 @@
         </div>
     </section>
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title" id="exampleModalLabel">
+
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
 
 
-
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery library -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -174,8 +120,50 @@
     <script src="js/sidebar.js"></script>
 
     <script>
-        let list_mobile = api_listmobile();
-        document.querySelector("#show_list_mobile").innerHTML = expoxt_html_list_mobile(list_mobile);
+        // let list_mobile = api_listmobile();
+        // document.querySelector("#show_list_mobile").innerHTML = expoxt_html_list_mobile(list_mobile);
+
+
+
+        const giaTriMacDinh = () => {
+            Th_gtTim.value = "";
+            Th_Thong_bao.innerHTML = `KHUNG THÔNG BÁO`;
+            Th_Sap_xep.selectedIndex = 0;
+            Th_Loc_gia.selectedIndex = 0;
+
+        }
+
+        //Bất Đồng bộ CallBack
+        let Danh_sach_Dien_thoai = [];
+        apiDanhsachDienthoaiCallback(ds => {
+            Danh_sach_Dien_thoai = ds;
+            Xuat_Danh_sach_Dien_thoai(Danh_sach_Dien_thoai, Th_Danh_sach);
+        })
+
+        // // All
+        // document.querySelector("#Th_Home").onclick = () => {
+        //     giaTriMacDinh()
+        //     Xuat_Danh_sach_Dien_thoai(Danh_sach_Dien_thoai, Th_Danh_sach);
+        // }
+
+        // Tìm
+        document.getElementById("Th_Tim").onclick = function() {
+            // Th_Tim.onclick = () => {
+            gtTim = Th_gtTim.value.trim();
+            console.log("value" + Th_gtTim.value.trim())
+            let Danh_sach_Tim = Danh_sach_Dien_thoai.filter(x => x.Ten.toLowerCase().includes(gtTim.toLowerCase()))
+            Xuat_Danh_sach_Dien_thoai(Danh_sach_Tim, Th_Danh_sach)
+        }
+
+        // Tìm 
+        function KeyCode(event) {
+
+            if (event.keyCode == 13) {
+                let gtTim = event.target.value
+                let Danh_sach_Tim = Danh_sach_Dien_thoai.filter(x => x.Ten.toLowerCase().includes(gtTim.toLowerCase()))
+                Xuat_Danh_sach_Dien_thoai(Danh_sach_Tim, Th_Danh_sach)
+            }
+        }
     </script>
 
 
