@@ -1,4 +1,4 @@
-const address = "http://localhost:8085";
+const address = "https://app-js-thuy.herokuapp.com";
 const api_listmobile = () => {
     let url = "mobile";
     let xmlhttp = new XMLHttpRequest();

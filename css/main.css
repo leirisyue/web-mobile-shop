@@ -23,6 +23,10 @@ body {
     color: #F28123
 }
 
+.color-white {
+    color: white;
+}
+
 .bg-base {
     background-color: #F28123;
 }
