@@ -9,68 +9,93 @@
     <!--Add this-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <!-- // -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="./css/item-style.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
     <!-- // -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
 
 <body>
-
-    <div class="col-sm-12 p-30-top">
-        <div class="row">
-            <div class="col-sm-2">
-                <div class="left-side-bar">
-                    <nav class="navbar navbar-light ">
-                        <div>
-                            <ul class="navbar-nav">
-                                <li class="navbar-brand" href="#">YUE</li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Features</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Pricing</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown link
-                          </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </li>
-                            </ul>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="bx bxl-c-plus-plus"></i>
+            <span class="logo-name">abc</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="./index.html">
+                    <i class="bx bx-home"></i>
+                    <span class="link-name">Trang chủ</span>
+                </a>
+            </li>
+            <li>
+                <a href="./index-mobile.html">
+                    <i class='bx bxs-devices'></i>
+                    <span class="link-name">Di động</span>
+                </a>
+            </li>
+            <li>
+                <a href="./index-tv.html">
+                    <i class='bx bx-tv'></i>
+                    <span class="link-name">Truyền hình</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class="bx bx-menu"></i>
+            <div class="col-sm-10 p-30-top" style="width:100%">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h2>Truyền hình thế hệ mới</h2>
                         </div>
-                    </nav>
-                </div>
-            </div>
-            <div class="col-sm-10">
-                <div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section-title">
-                                    <h2>Truyền hình thế hệ mới</h2>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    Tìm kiếm:
+                                    <input type="text" id="Th_gtTim_tv" onkeyup="KeyCode(event)">
+                                    <button id="Th_Tim" class="btn btn-primary">
+                                    <i class="fa fa-search-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="col-sm-6 text-right" style="padding-left: 30px;">
+                                    <select class="btn btn-outline-primary" id="Th_Sap_xep_tv">
+                                                <option class="item" value="0">-- Sắp xếp theo --</option>
+                                                <option class="item" value="1">Sắp xếp theo Tên (A->Z)</option>
+                                                <option class="item" value="2">Sắp xếp theo Tên (Z->A)</option>
+                                                <option class="item" value="3">Sắp xếp theo Giá (A->Z)</option>
+                                                <option class="item" value="4">Sắp xếp theo Giá (Z->A)</option>
+                                            </select>
+
+                                    <select class="btn btn-outline-primary" id="Th_Loc_gia_tv">
+                                                <option value="0-50000000">-- Chọn giá bán --</option>
+                                                <option value="0-5000000">Dưới 5 triệu</option>
+                                                <option value="5000000-10000000">Từ 5 triệu đến 10 triệu</option>
+                                                <option value="10000000-20000000">Từ 10 triệu đến 20 triệu</option>
+                                                <option value="20000000-50000000">Trên 20 triệu</option>
+                                            </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="row featured__filter">
-                            <div class="row" id="show_list_tv"></div>
-                        </div>
+
+                        <div class="col-sm-12" id="Th_Thong_bao_tv"></div>
+                    </div>
+                    <div class="col-sm-12 featured__filter ">
+                        <div class="row" id="Th_Danh_sach_tv"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
+        </div>
+    </section>
 
 
     <!-- jQuery library -->
@@ -82,10 +107,118 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/tv.js"></script>
     <script src="js/api.js"></script>
+    <script src="js/sidebar.js"></script>
 
     <script>
-        let list_tv = api_gettv();
-        document.querySelector("#show_list_tv").innerHTML = expoxt_html_list_tv(list_tv);
+        // let list_tv = api_gettv();
+        // document.querySelector("#show_list_tv").innerHTML = expoxt_html_list_tv(list_tv);
+
+        const giaTriMacDinh = () => {
+            Th_gtTim_tv.value = "";
+            Th_Thong_bao_tv.innerHTML = `KHUNG THÔNG BÁO`;
+            Th_Sap_xep_tv.selectedIndex = 0;
+            Th_Loc_gia_tv.selectedIndex = 0;
+
+        }
+
+        //Bất Đồng bộ CallBack
+        let Danh_sach_tv = [];
+        apiDanhsachTVCallback(ds => {
+            Danh_sach_tv = ds;
+            Xuat_Danh_sach_tv(Danh_sach_tv, Th_Danh_sach_tv);
+        })
+
+        // // All
+        // document.querySelector("#Th_Home").onclick = () => {
+        //     giaTriMacDinh()
+        //     Xuat_Danh_sach_tv(Danh_sach_tv, Th_Danh_sach_tv);
+        // }
+
+        // Tìm
+        document.getElementById("Th_Tim").onclick = function() {
+            // Th_Tim.onclick = () => {
+            gtTim = Th_gtTim_tv.value.trim();
+            console.log("value" + Th_gtTim_tv.value.trim())
+            let Danh_sach_Tim = Danh_sach_tv.filter(x => x.Ten.toLowerCase().includes(gtTim.toLowerCase()))
+            Xuat_Danh_sach_tv(Danh_sach_Tim, Th_Danh_sach_tv)
+        }
+
+        // Tìm 
+        function KeyCode(event) {
+
+            if (event.keyCode == 13) {
+                let gtTim = event.target.value
+                let Danh_sach_Tim = Danh_sach_tv.filter(x => x.Ten.toLowerCase().includes(gtTim.toLowerCase()))
+                Xuat_Danh_sach_tv(Danh_sach_Tim, Th_Danh_sach_tv)
+            }
+        }
+
+
+        // Sắp xếp
+        Th_Sap_xep_tv.onchange = () => {
+            let chon = Th_Sap_xep_tv.value;
+            switch (parseInt(chon)) {
+                case 1:
+                    Sap_Tang_theo_Ten()
+                    break;
+                case 2:
+                    Sap_Giam_theo_Ten()
+                    break;
+                case 3:
+                    Sap_Tang_Gia()
+                    break;
+                case 4:
+                    Sap_Giam_Gia()
+                    break;
+                default:
+                    console.log('Khong biet')
+
+            }
+        }
+
+        // Lọc giá bán
+        document.querySelector("#Th_Loc_gia_tv").onchange = () => {
+                let value = document.querySelector("#Th_Loc_gia_tv").value;
+                //console.log(value);
+                let ds = value.split("-");
+                //console.log(ds);
+                let bd = Number(ds[0]);
+                let kt = Number(ds[1]);
+                console.log(`Bắt đầu: ${bd} - Kết thúc: ${kt}`);
+                let dsGia = Danh_sach_tv.filter(item => item.Don_gia_Ban >= bd && item.Don_gia_Ban <= kt)
+                Xuat_Danh_sach_tv(dsGia, Th_Danh_sach_tv);
+
+            }
+            // Xây dựng các hàm sắp xếp
+            // Sắp xếp 
+        function Sap_Tang_theo_Ten() {
+            // Là chuỗi
+            Danh_sach_tv.sort((a, b) => a.Ten.localeCompare(b.Ten))
+            Xuat_Danh_sach_tv(Danh_sach_tv, Th_Danh_sach_tv)
+        }
+
+        function Sap_Giam_theo_Ten() {
+            // Là chuỗi
+            Danh_sach_tv.sort((a, b) => b.Ten.localeCompare(a.Ten))
+            Xuat_Danh_sach_tv(Danh_sach_tv, Th_Danh_sach_tv)
+        }
+
+        function Sap_Tang_Gia() {
+            // Là số
+            Danh_sach_tv.sort((a, b) => {
+                return parseInt(a.Don_gia_Ban) - parseInt(b.Don_gia_Ban)
+            })
+            Xuat_Danh_sach_tv(Danh_sach_tv, Th_Danh_sach_tv)
+
+        }
+
+        function Sap_Giam_Gia() {
+            // Là số
+            Danh_sach_tv.sort((a, b) => {
+                return parseInt(b.Don_gia_Ban) - parseInt(a.Don_gia_Ban)
+            })
+            Xuat_Danh_sach_tv(Danh_sach_tv, Th_Danh_sach_tv)
+        }
     </script>
 
 

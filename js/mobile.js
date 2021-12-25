@@ -28,10 +28,10 @@ const expoxt_html_list_mobile = (listmobile) => {
 
 function Xuat_Danh_sach_Dien_thoai(Danh_sach, Th_Cha) {
     Th_Cha.innerHTML = ""
+    Th_Thong_bao.innerHTML = `Không có sản phẩm phù hợp `
     Danh_sach.forEach(Dien_thoai => {
         var The_hien = document.createElement("div")
         The_hien.className = "col-lg-3 col-md-4 col-sm-6 mobile_card"
-
         var Noi_dung_HTML =
             // `
             // <img class="card-img-top" src="${Dien_thoai.image_mini}" alt="">
@@ -53,8 +53,8 @@ function Xuat_Danh_sach_Dien_thoai(Danh_sach, Th_Cha) {
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">${Dien_thoai.Ten}</a></h6>
-                            <h5>${Dien_thoai.Don_gia_Ban}</h5>
+                            <h6>${Dien_thoai.Ten}</h6>
+                            <h5>Giá: ${Tao_Chuoi_The_hien_So_nguyen_duong(Dien_thoai.Don_gia_Ban)} đồng</h5>
                         </div>
                     </div>
                 
@@ -67,6 +67,41 @@ function Xuat_Danh_sach_Dien_thoai(Danh_sach, Th_Cha) {
 
         }
 
-        Th_Thong_bao.innerHTML = `Tổng số sản phẩm ${Danh_sach.length} `
+        Th_Thong_bao.innerHTML = `Tổng số sản phẩm: ${Danh_sach.length} `
     })
+}
+
+function Tao_Chuoi_The_hien_So_nguyen_duong(So_nguyen) {
+    var Chuoi_The_hien = ""
+    var Chuoi_So_nguyen = So_nguyen.toString()
+    var So_Ky_so = Chuoi_So_nguyen.length
+    if (So_Ky_so % 3 == 0) {
+        for (var Chi_so = 0; Chi_so < Chuoi_So_nguyen.length; Chi_so++) {
+            Chuoi_The_hien += Chuoi_So_nguyen[Chi_so]
+            if (Chi_so % 3 == 2 && Chi_so < Chuoi_So_nguyen.length - 1)
+                Chuoi_The_hien += "."
+        }
+    } else if (So_Ky_so % 3 == 1) {
+        Chuoi_The_hien = Chuoi_So_nguyen[0]
+        if (So_Ky_so > 1)
+            Chuoi_The_hien += "."
+        Chuoi_So_nguyen = Chuoi_So_nguyen.slice(1)
+        for (var Chi_so = 0; Chi_so < Chuoi_So_nguyen.length; Chi_so++) {
+            Chuoi_The_hien += Chuoi_So_nguyen[Chi_so]
+            if (Chi_so % 3 == 2 && Chi_so < Chuoi_So_nguyen.length - 1)
+                Chuoi_The_hien += "."
+
+        }
+    } else if (So_Ky_so % 3 == 2) {
+        Chuoi_The_hien = Chuoi_So_nguyen[0] + Chuoi_So_nguyen[1]
+        if (So_Ky_so > 2)
+            Chuoi_The_hien += "."
+        Chuoi_So_nguyen = Chuoi_So_nguyen.slice(2)
+        for (var Chi_so = 0; Chi_so < Chuoi_So_nguyen.length; Chi_so++) {
+            Chuoi_The_hien += Chuoi_So_nguyen[Chi_so]
+            if (Chi_so % 3 == 2 && Chi_so < Chuoi_So_nguyen.length - 1)
+                Chuoi_The_hien += "."
+        }
+    }
+    return Chuoi_The_hien
 }
